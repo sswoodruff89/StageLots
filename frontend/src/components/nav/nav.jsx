@@ -5,7 +5,7 @@ const NavBar = (props) => {
 
     return (
         <header className="navbar">
-            <h2>Stage Seeker</h2>
+            <h2>StageLots</h2>
 
             <div className="buttons">
                 <button className="login">

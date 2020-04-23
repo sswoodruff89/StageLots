@@ -4,7 +4,7 @@ import SignupForm from "../session/signup_form";
 const HomePage = () => {
     return (
         <main>
-            <h1>Stage Seeker</h1>
+            <h1>StageLots</h1>
             <SignupForm />
 
             <footer>
