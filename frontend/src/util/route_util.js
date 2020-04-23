@@ -19,7 +19,7 @@ const Auth = ({component: Component, path, exact}) => {
     );
 }
 
-const Protected = ({component: Component, loggedIn, ...rest}) => {
+const Protected = ({component: Component, ...rest}) => {
     const loggedIn = useSelector((state) => state.session.isAuthenticated);
     
     return (

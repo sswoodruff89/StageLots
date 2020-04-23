@@ -1,25 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import "./assets/master.scss";
 import * as serviceWorker from './serviceWorker';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-
-
-
-import React from "react";
-import ReactDOM from "react-dom";
 
 // We will create this component shortly
 import Root from "./components/root";
@@ -49,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create a preconfigured state we can immediately add to our store
     const preloadedState = {
-      session: { isAuthenticated: true, user: decodedUser },
+      session: { isAuthenticated: true, user: decodedUser }
     };
 
     store = configureStore(preloadedState);
