@@ -1,0 +1,26 @@
+.session-form{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2% 6%;
+}
+
+.session-form-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form, .login-form {
+    display: flex;
+    flex-direction: column;
+
+    input{
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .error-caption {
+        font-size: 10px;
+        color: red;
+    }
+}

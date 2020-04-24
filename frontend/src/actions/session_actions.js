@@ -15,11 +15,11 @@ export const receiveCurrentUser = user => ({
 export const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
-})
+});
 
 export const deleteErrors = () => ({
     type: DELETE_SESSION_ERRORS
-})
+});
 
 export const logoutUser = () => ({
     type: RECEIVE_USER_LOGOUT
