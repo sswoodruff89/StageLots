@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import {closeModal} from "../../actions/modal_actions";
 import {signup, login, deleteErrors} from '../../actions/session_actions';
 
 const SessionForm = (props) => {
@@ -36,7 +37,7 @@ const SessionForm = (props) => {
 
     confirmPassword = (
       <>
-        <div>Confirm Password</div>
+        {/* <div>Confirm Password</div> */}
         <input
           className="password2"
           type="password"
@@ -51,18 +52,17 @@ const SessionForm = (props) => {
         </div>
       </>
     );
-
-
     
     redirect = (
       <div className="redirect">
         <p>Have an account?</p>
         <p
           onClick={() => {
-            setFormType("signup");
+            setFormType("login");
             dispatch(deleteErrors());
           }}
         >
+          {" "}
           Log in!
         </p>
       </div>
@@ -81,6 +81,7 @@ const SessionForm = (props) => {
             dispatch(deleteErrors());
           }}
         >
+          {" "}
           Sign in!
         </p>
       </div>
@@ -91,14 +92,14 @@ const SessionForm = (props) => {
 //////////////////Render Return//////////////////////
 
   return (
-    <form
-      className="session-form"
-      onSubmit={handleSubmit}
-    >
-      <h2 className="session-form-header">{header}</h2>
+    <form className="session-form" onSubmit={handleSubmit}>
 
+      <div className="close-modal" onClick={() => dispatch(closeModal())} >
+        <i className="fas fa-times"></i>
+      </div>{" "}
+      <h2 className="session-form-header">{header}</h2>
       <div className={`${formType}-form`}>
-        <div>Email</div>
+        {/* <div>Email</div> */}
         <input
           className="email"
           type="text"
@@ -112,7 +113,7 @@ const SessionForm = (props) => {
           {errors.email}
         </div>
 
-        <div>Password</div>
+        {/* <div>Password</div> */}
         <input
           className="password"
           type="password"
@@ -127,9 +128,10 @@ const SessionForm = (props) => {
         </div>
 
         {confirmPassword}
-
-        <button className='form-submit' type="submit">{header}</button>
       </div>
+      <button className="form-submit" type="submit">
+        {header}
+      </button>
       {redirect}
     </form>
   );
