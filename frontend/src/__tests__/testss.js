@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow, mount} from "enzyme";
 import { render, fireEvent, getByLabelText } from '@testing-library/react';
-import SessionForm from "../components/session/session_form";
 import SignupForm from "../components/session/signup_form";
 import "@testing-library/jest-dom/extend-expect";
 
