@@ -1,11 +1,11 @@
 import React from 'react';
-import SignupForm from "../session/signup_form";
 
 const HomePage = () => {
     return (
         <main>
-            <h1>StageLots</h1>
-            <SignupForm />
+            <div className="home-page">
+                <h1>Welcome to Stage Lots</h1>
+            </div>
 
             <footer>
                 {Date(Date.now()).toString()}
