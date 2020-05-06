@@ -1,17 +1,19 @@
 import React from 'react';
+import Search from "../search/search";
 
 const HomePage = () => {
     return (
-        <main>
-            <div className="home-page">
-                <h1>Welcome to Stage Lots</h1>
-            </div>
+      <main>
+        <section className="home-search-container">
+            <Search />
+        </section>
+        <div className="home-page">
+          <h1>Welcome to Stage Lots</h1>
+        </div>
 
-            <footer>
-                {Date(Date.now()).toString()}
-            </footer>
-        </main>
-    )
+        <footer>{Date(Date.now()).toString()}</footer>
+      </main>
+    );
 };
 
 export default HomePage;

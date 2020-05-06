@@ -1,9 +1,19 @@
 import React, {useState} from 'react';
+import classNames from "classnames";
+
+// let cx = classNames.bind(styles);
 
 
 const ProfilePage = (props) => {
 
-    const [tab, setTab] = useState('Favorites')
+    const [tab, setTab] = useState('Favorites');
+
+    // const tabClassName = (tabValue) => {
+    //     return cx({
+    //         'profile-tab': true,
+    //         'current': tab === tabValue
+    //     });
+    // }
 
     return (
       <section className="profile-page">

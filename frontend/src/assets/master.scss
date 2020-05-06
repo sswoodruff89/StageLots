@@ -5,6 +5,7 @@
 @import "session.scss";
 @import "home.scss";
 @import "profile.scss";
+@import "search.scss";
 
 body {
   margin: 0;
@@ -18,4 +19,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  padding-top: 100px;
 }
